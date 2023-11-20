@@ -122,7 +122,7 @@ contains
         io_stat = 0
         io_msg = "Success"
 
-        write(*, "(A, *(A, G0, 1X))") "line_t: ", "x = ", self%x, "y = ", self%y, "l = ", self%length
+        write(*, "(A, *(A, G0, 1X))") "line: ", "x = ", self%x, "y = ", self%y, "l = ", self%length
 
     end subroutine write_line
 
@@ -142,7 +142,7 @@ contains
         io_stat = 0
         io_msg = "Success"
 
-        write(*, "(A, *(A, G0, 1X))") "vertice_t: ", "x = ", self%x, "y = ", self%y
+        write(*, "(A, *(A, G0, 1X))") "vertice: ", "x = ", self%x, "y = ", self%y
 
     end subroutine write_vertice
 
@@ -162,7 +162,7 @@ contains
         io_stat = 0
         io_msg = "Success"
 
-        write(*, "(A, *(A, G0, 1X))") "rectangle_t: ", "x = ", self%x, "y = ", self%y, "l = ", self%length, "w = ", self%width
+        write(*, "(A, *(A, G0, 1X))") "rectangle: ", "x = ", self%x, "y = ", self%y, "l = ", self%length, "w = ", self%width
 
     end subroutine write_rectangle
 
@@ -182,7 +182,7 @@ contains
         io_stat = 0
         io_msg = "Success"
 
-        write(*, "(A, *(A, G0, 1X))") "circle_t: ", "x = ", self%x, "y = ", self%y, "r = ", self%radius
+        write(*, "(A, *(A, G0, 1X))") "circle: ", "x = ", self%x, "y = ", self%y, "r = ", self%radius
 
     end subroutine write_circle
 
