@@ -5,12 +5,12 @@ module abstract_type_m
     type, abstract, public :: geometry_t
         real(8) :: x, y
     contains
-        procedure(write), deferred :: write
+        procedure(write_geometry), deferred :: write
         generic, public :: write(formatted) => write
     end type
 
     abstract interface
-        subroutine write(self, unit, io_type, v_list, io_stat, io_msg)
+        subroutine write_geometry(self, unit, io_type, v_list, io_stat, io_msg)
             import geometry_t
             class(geometry_t), intent(in) :: self
             integer, intent(in) :: unit
@@ -18,7 +18,7 @@ module abstract_type_m
             integer, intent(in) :: v_list(:)
             integer, intent(out) :: io_stat
             character(len=*), intent(inout) :: io_msg
-        end subroutine write
+        end subroutine write_geometry
     end interface
 
     type, extends(geometry_t), public :: vertice_t
